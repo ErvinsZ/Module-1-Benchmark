@@ -95,6 +95,3 @@ var opt4=document.getElementById('opt4');
               quiz.next();
               quiz.clickAble();
          } 
-
-
-
