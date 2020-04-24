@@ -1,15 +1,14 @@
-   
-   var ul=document.getElementById('ul');
-   var btn=document.getElementById('button');
-   var scoreCard=document.getElementById('scoreCard');
-   var quizBox=document.getElementById('questionBox');
-  var opt1=document.getElementById('opt1');
-  var opt2=document.getElementById('opt2');
-  var opt3=document.getElementById('opt3');
-  var opt4=document.getElementById('opt4');
+var ul=document.getElementById('ul');
+var btn=document.getElementById('button');
+var scoreCard=document.getElementById('scoreCard');
+var quizBox=document.getElementById('questionBox');
+var opt1=document.getElementById('opt1');
+var opt2=document.getElementById('opt2');
+var opt3=document.getElementById('opt3');
+var opt4=document.getElementById('opt4');
 
 
-      var app={
+      var quiz={
                 questions:[
                           {q:'Who is Gendalf?', answers:['Wizard in LOTR',"Harry Potter's brother",'King of Sweden','All of the mentioned'],answer:1},
 
@@ -22,6 +21,10 @@
                           {q:'What alphabet is this - ես սիրում եմ պիցցա?',answers:['Russian','Hindi','Armenian','Thai'],answer:3}
                           ],
                 index:0,
+
+
+                           
+
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
                         quizBox.innerHTML=this.index+1+". "+this.questions[this.index].q;      
@@ -81,16 +84,16 @@
            }
 
 
-           window.onload=app.load();
+           window.onload=quiz.load();
 
            function button(ele){
-           	     app.check(ele);
-           	     app.notClickAble();
+           	     quiz.check(ele);
+           	     quiz.notClickAble();
            }
 
          function  next(){
-              app.next();
-              app.clickAble();
+              quiz.next();
+              quiz.clickAble();
          } 
 
 
