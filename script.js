@@ -48,19 +48,19 @@ var opt4=document.getElementById('opt4');
                     this.index++;
                     this.load();
                  },
-                check:function(ele){
+                check:function(highlight){
                    
-                         var id=ele.id.split('');
+                         var id=highlight.id.split('');
                          
                          if(id[id.length-1]==this.questions[this.index].answer){
                          	this.score++;
-                         	ele.className="correct";
-                         	ele.innerHTML="Correct";
+                         	highlight.className="correct";
+                         	highlight.innerHTML="Correct";
                          	this.scoreCard();
                          }
                          else{
-                         	ele.className="wrong";
-                         	ele.innerHTML="Wrong";
+                         	highlight.className="wrong";
+                         	highlight.innerHTML="Wrong";
                          }
                 },
                 notClickAble:function(){
@@ -86,8 +86,8 @@ var opt4=document.getElementById('opt4');
 
            window.onload=quiz.load();
 
-           function button(ele){
-           	     quiz.check(ele);
+           function button(highlight){
+           	     quiz.check(highlight);
            	     quiz.notClickAble();
            }
 
