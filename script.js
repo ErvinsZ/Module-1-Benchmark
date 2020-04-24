@@ -3,10 +3,10 @@
    var btn=document.getElementById('button');
    var scoreCard=document.getElementById('scoreCard');
    var quizBox=document.getElementById('questionBox');
-  var op1=document.getElementById('op1');
-  var op2=document.getElementById('op2');
-  var op3=document.getElementById('op3');
-  var op4=document.getElementById('op4');
+  var opt1=document.getElementById('opt1');
+  var opt2=document.getElementById('opt2');
+  var opt3=document.getElementById('opt3');
+  var opt4=document.getElementById('opt4');
 
 
       var app={
@@ -25,19 +25,19 @@
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
                         quizBox.innerHTML=this.index+1+". "+this.questions[this.index].q;      
-                        op1.innerHTML=this.questions[this.index].answers[0];
-                        op2.innerHTML=this.questions[this.index].answers[1];
-                        op3.innerHTML=this.questions[this.index].answers[2];
-                        op4.innerHTML=this.questions[this.index].answers[3];
+                        opt1.innerHTML=this.questions[this.index].answers[0];
+                        opt2.innerHTML=this.questions[this.index].answers[1];
+                        opt3.innerHTML=this.questions[this.index].answers[2];
+                        opt4.innerHTML=this.questions[this.index].answers[3];
                            this.scoreCard();
                         }
                         else{
 
                         quizBox.innerHTML="Thank you for participating!"      
-                        op1.style.display="none";
-                        op2.style.display="none";
-                        op3.style.display="none";
-                        op4.style.display="none";
+                        opt1.style.display="none";
+                        opt2.style.display="none";
+                        opt3.style.display="none";
+                        opt4.style.display="none";
                         btn.style.display="none";
                         }
                 },
